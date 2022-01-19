@@ -1,0 +1,13 @@
+cluster.yaml:
+  apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+metadata:
+  name: xxx-cluster
+  region: eu-west-1
+nodeGroups:
+  - name: nodegroup01
+    instanceType: m5.xlarge
+    desiredCapacity: 3
+    volumeSize: 300
+    ssh:
+    publicKeyPath: ~/.ssh/ec2_id_rsa.pub
